@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles.css';
+import profileImage from './img/profile-image.png'
 
 /** creating react components */
 /** Functional Component */
@@ -22,7 +23,7 @@ const Header =() =>{
 const UserCard = () =>{
   return (
     <div className='userCard'>
-    <img src='{./img}' alt='profile img'/>
+    <img src={profileImage} alt='profile img'/>
     <h2>Prince Hope</h2>
     </div>
   )
@@ -34,11 +35,24 @@ const TechList = () =>{
   return techsFormatted
 }
 
+const Main = () =>{
+  return (
+    <main>
+      <div className='main-wrapper'>
+        <p>Prerequisite to get started with react.js </p>
+        <ul>
+          <TechList/>
+        </ul>
+        <UserCard/>
+      </div>
+    </main>
+  )
+}
 const App = () =>{
   return (
     <div className='app'>
       {<Header/>}
-      {<userCard/>}
+      {<Main/>}
     </div>
   )
 }
