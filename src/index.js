@@ -12,7 +12,7 @@ const Header =() =>{
   return ( <header>
   <div className='header-wrapper'>
   <h1>Welcome to 30 Days Of React</h1>
-    <h2>Getting Started React</h2>
+    <h2>Getting Started with React</h2>
     <h3>JavaScript Library</h3>
     <p>Prince Hope</p>
     <small>Oct 3, 2020</small>
@@ -41,9 +41,11 @@ const Main = () =>{
       <div className='main-wrapper'>
         <p>Prerequisite to get started with react.js </p>
         <ul>
+          <li>
           <TechList/>
+
+          </li>
         </ul>
-        <UserCard/>
       </div>
     </main>
   )
@@ -53,6 +55,8 @@ const App = () =>{
     <div className='app'>
       {<Header/>}
       {<Main/>}
+      {<UserCard/>}
+      
     </div>
   )
 }
